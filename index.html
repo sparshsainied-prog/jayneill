@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Jay Neill · The LineFolk of London</title>
+<meta name="description" content="A homepage idea made by Sparsh Saini for Jay Neill. Not his official site.">
+<meta property="og:title" content="Jay Neill · The LineFolk of London (a homepage idea)">
+<meta property="og:description" content="A homepage idea made by Sparsh Saini for Jay Neill. Not his official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/jayneill/img/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Signika:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/b1.jpg">
+<style>
+:root{--concrete:#858583;--slab:#5d5d5b;--deep:#3b3b3a;--cream:#ece9e2;--chalk:#d6d4cf;--y:#f2c21b;--b:#86b0e2;--g:#93c947;--ink:#1e1e1d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--deep)}
+body{background:var(--deep);color:var(--cream);font:1.16rem/1.6 "IM Fell French Canon",Georgia,serif;-webkit-font-smoothing:antialiased}
+a{color:var(--cream)}
+.strip{background:#262626;color:var(--chalk);font:500 .9rem/1.4 Signika,sans-serif;text-align:center;padding:.5rem 16px}
+.sans{font-family:Signika,sans-serif;font-weight:700;letter-spacing:.01em}
+/* nav: a line diagram with stations, like the stops round the cover's ring */
+.line{position:fixed;z-index:20;right:10px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:1.3rem;padding:.6rem 0}
+.line::before{content:"";position:absolute;right:6px;top:0;bottom:0;width:3px;background:var(--chalk);opacity:.8}
+.line a{position:relative;display:flex;align-items:center;justify-content:flex-end;gap:.5rem;text-decoration:none;font:700 .8rem Signika,sans-serif;color:var(--cream);text-shadow:0 1px 3px #000;padding-right:0}
+.line a::after{content:"";width:15px;height:15px;border-radius:50%;background:var(--deep);border:3px solid var(--chalk);flex:none}
+/* hero */
+.hero{position:relative;height:360vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--concrete)}
+.book{position:absolute;left:0;top:0;width:var(--bw);aspect-ratio:1016/1559;transform-origin:50% 36%;will-change:transform}
+.book img{position:absolute;inset:0;width:100%;height:100%;display:block;will-change:opacity}
+.book img+img{opacity:0}
+.cap{position:absolute;z-index:2;left:24px;right:24px;bottom:64px;text-align:center}
+.cap .t{font-size:clamp(1.12rem,4.6vw,2.2rem);line-height:1.1;color:var(--ink)}
+.cap .t span{position:absolute;left:0;right:0;opacity:0;will-change:opacity}
+.cap .t span:first-child{position:relative;opacity:1}
+.copy{position:absolute;z-index:3;left:16px;right:16px;bottom:22px;opacity:0;will-change:opacity,transform;text-align:center}
+.copy h1{font-weight:400;font-size:clamp(1.45rem,6vw,2.6rem);line-height:1.1;color:var(--cream)}
+.copy p{font:500 1rem/1.45 Signika,sans-serif;color:var(--chalk);margin:.4rem 0 .9rem}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:700 1rem Signika,sans-serif;text-decoration:none;color:var(--ink);background:var(--cream);padding:.6rem 1.05rem;border-radius:999px;border:3px solid var(--chalk)}
+.btn::before{content:"";width:10px;height:10px;border-radius:50%;border:3px solid currentColor}
+.btn.y{background:var(--y)}
+@media (max-width:899px){.line{right:4px}.line a{font-size:0;gap:0}.line a::after{width:13px;height:13px}.stage::after{content:"";position:absolute;left:0;right:0;bottom:0;height:44%;background:linear-gradient(transparent,rgba(42,42,41,.95) 48%);opacity:var(--sc,0);pointer-events:none;z-index:2}}
+@media (min-width:900px){.cap,.copy{left:auto;right:9vw;width:34vw;top:50%;bottom:auto;transform:translateY(-50%);text-align:left}.btns{justify-content:flex-start}.cap .t{color:var(--ink)}}
+/* calm sections */
+section.s{max-width:1060px;margin:0 auto;padding:5.5rem 16px}
+h2{font-weight:400;font-size:clamp(1.9rem,6vw,3rem);line-height:1.05;margin-bottom:1.4rem}
+.vol{display:grid;gap:1.6rem;margin-bottom:3.6rem;align-items:start}
+.vol img{width:min(240px,64%);display:block;box-shadow:0 14px 34px rgba(0,0,0,.5)}
+@media (min-width:760px){.vol{grid-template-columns:240px 1fr;gap:3rem}.vol img{width:100%}}
+.vol h3{font-weight:400;font-size:1.7rem;line-height:1.1}
+.vol .k{font:700 .85rem Signika,sans-serif;color:var(--chalk);margin:.3rem 0 .8rem;letter-spacing:.03em}
+.vol p{max-width:62ch;margin-bottom:.8rem}
+.y1{color:var(--y)}.b2{color:var(--b)}.g3{color:var(--g)}
+.also{display:grid;gap:2rem;margin-top:1rem}
+@media (min-width:760px){.also{grid-template-columns:1fr 1fr}}
+.also img{width:150px;float:left;margin:0 1rem .5rem 0;box-shadow:0 10px 24px rgba(0,0,0,.45)}
+.also p{font-size:1.05rem}
+.qa{display:grid;gap:2rem;align-items:center}
+@media (min-width:760px){.qa{grid-template-columns:260px 1fr;gap:3rem}}
+.qa img{width:min(260px,70%);border-radius:50%;border:4px solid var(--chalk);display:block}
+.qa dl{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1.2rem}
+.qa dt{font:700 1rem Signika,sans-serif;color:var(--chalk)}
+.fair{background:var(--slab);padding:2.2rem 1.4rem;border-radius:4px;position:relative;overflow:hidden}
+.fair .big{font-size:clamp(2.4rem,10vw,4.4rem);line-height:1;color:var(--y)}
+.fair p{max-width:56ch}
+footer{text-align:center;font:500 .92rem Signika,sans-serif;color:var(--chalk);padding:3rem 16px 4rem;border-top:1px solid #555}
+@media (prefers-reduced-motion:reduce){.hero{height:auto}.stage{position:relative;height:auto;padding:2rem 16px}.book{position:relative;width:min(80vw,420px);margin:0 auto 1.5rem;transform:none!important}.book img{opacity:0!important}.book img:last-child{opacity:1!important}.cap{display:none}.copy{position:relative;opacity:1!important;transform:none!important;left:auto;right:auto;bottom:auto;top:auto;width:auto}.stage::after{display:none}}
+</style>
+</head>
+<body>
+<div class="strip">A homepage idea made by Sparsh Saini for Jay Neill. Not his official site.</div>
+<nav class="line" aria-label="Sections"><a href="#books" aria-label="Books">Books</a><a href="#jay" aria-label="Jay">Jay</a><a href="#scribefest" aria-label="ScribeFest">ScribeFest</a></nav>
+
+<header class="hero">
+  <div class="stage" id="stage">
+    <div class="book" id="book" role="img" aria-label="The LineFolk of London covers: an anatomical Vitruvian figure, half human and half creature, in a ring of Underground stops. Its creature half changes from a lion to a bear to a bat as you scroll.">
+      <img src="img/b1.jpg" alt="" width="1016" height="1559"><img src="img/b2.jpg" alt="" width="1016" height="1559"><img src="img/b3.jpg" alt="" width="1016" height="1559">
+    </div>
+    <div class="cap" id="cap" aria-hidden="true"><div class="t"><span>Welcome to the Underground. Don't stray from the lines.</span><span>In a city built on top of monsters, the most dangerous thing you can do is care.</span><span>London is a city of secrets.</span></div></div>
+    <div class="copy" id="copy">
+      <h1>Some secrets are too sick to stay hidden.</h1>
+      <p>The LineFolk of London, books one to three. British urban fantasy under the Tube.</p>
+      <div class="btns"><a class="btn y" href="https://www.amazon.co.uk/stores/author/B0FQ1XD2Y1">Buy on Amazon</a><a class="btn" href="https://shop.bookvault.app/product-category/authors/jay-neill/">Paperbacks</a></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="s" id="books">
+  <h2>The LineFolk of London</h2>
+  <div class="vol"><img src="img/b1.jpg" alt="Curious Physiologies cover" width="1016" height="1559" loading="lazy"><div>
+    <h3 class="y1">Curious Physiologies</h3><div class="k">BOOK ONE</div>
+    <p>Hannah Chadwick is running from her past, but she just stumbled into London's most dangerous secret. Blacklisted after speaking out against corporate misconduct, she takes a job at a nondescript clinic just off Harley Street, treating patients with "rare conditions" for an eccentric abclynician named Julius Wayworthy.</p>
+    <p>Hidden throughout the city are the LineFolk: thousands of creatures, from elegant haemovores to monstrous shapeshifters, who use the Tube to hide their true forms.</p>
+    <div class="btns" style="justify-content:flex-start"><a class="btn y" href="https://www.amazon.co.uk/stores/author/B0FQ1XD2Y1">Amazon or Kindle Unlimited</a><a class="btn" href="https://shop.bookvault.app/product/curious-physiologies/">Paperback</a></div>
+  </div></div>
+  <div class="vol"><img src="img/b2.jpg" alt="Peculiar Consequences cover" width="1016" height="1559" loading="lazy"><div>
+    <h3 class="b2">Peculiar Consequences</h3><div class="k">BOOK TWO</div>
+    <p>Every action has a price. A rhythmic, spectral tapping begins to haunt Hannah, a sound no one else can hear, and draws her toward the dark history of Cockpit Steps, where LineFolk are once again being treated as sport.</p>
+    <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://shop.bookvault.app/product/peculiar-consequences/">Paperback</a></div>
+  </div></div>
+  <div class="vol"><img src="img/b3.jpg" alt="Unusual Afflictions cover" width="1016" height="1559" loading="lazy"><div>
+    <h3 class="g3">Unusual Afflictions</h3><div class="k">BOOK THREE</div>
+    <p>When a young nymph collapses on the doorstep of the clynic, Hannah thinks she's dealing with a simple human infection. She's wrong. A plague spreads across the Ouroboros, and the LineFolk face two grim fates: extinction, or exposure.</p>
+    <p><i>The LineFolk are falling. And the cure might be deadlier than the disease.</i></p>
+    <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://shop.bookvault.app/product/unusual-afflictions/">Paperback</a></div>
+  </div></div>
+  <div class="also">
+    <p><img src="img/sloane.jpg" alt="The Lord of Sloane Square cover" width="425" height="646" loading="lazy"><b>The Lord of Sloane Square.</b> A LineFolk of London novella. London is a dangerous place for a monster that has found a conscience.</p>
+    <p><img src="img/terminus.jpg" alt="The Terminus Of All Things cover" width="560" height="866" loading="lazy"><b>The Terminus Of All Things.</b> Standalone portal fantasy. First his heart broke. Then reality did. Jack Gardener, dumped in a London railway station, stumbles into Endland, a realm built from everything our world threw away.</p>
+  </div>
+</section>
+
+<section class="s" id="jay">
+  <div class="qa">
+    <img src="img/jay.jpg" alt="Jay Neill" width="600" height="600" loading="lazy">
+    <div>
+      <h2>Meet Jay</h2>
+      <dl><dt>Age?</dt><dd>53... sadly... and counting</dd><dt>Lives?</dt><dd>Hampshire, England</dd><dt>Family?</dt><dd>Lots!</dd><dt>Pets?</dt><dd>2 dogs, 3 cats, n chickens</dd><dt>Reads?</dt><dd>Portal fantasy, urban fantasy, high concept sci-fi</dd><dt>Deluded?</dt><dd>Almost certainly</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="scribefest">
+  <div class="fair">
+    <p class="sans" style="color:var(--chalk)">NEXT STOP</p>
+    <div class="big">ScribeFest</div>
+    <p style="margin-top:.6rem">Christmas Edition, Sunday 8 November, Sedgebrook Hall, Northamptonshire. Come and say hello, and pick up the LineFolk in paperback.</p>
+  </div>
+  <p style="margin-top:2rem" class="sans"><a href="https://www.instagram.com/jayneill.author/">Instagram</a> · <a href="https://www.tiktok.com/@jay.neill5">TikTok</a> · <a href="https://jayneill.com/newsletter-signup/">Newsletter</a></p>
+</section>
+</main>
+<footer>A mockup made by Sparsh Saini for Jay Neill. Not affiliated, not live.</footer>
+<script>
+(()=>{const hero=document.querySelector('.hero'),stage=document.getElementById('stage'),book=document.getElementById('book'),L=[...book.querySelectorAll('img')],T=[...document.querySelectorAll('.cap .t span')],cap=document.getElementById('cap'),copy=document.getElementById('copy');
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+let W,H,bw,bh,rx,ry,ht,tick=false;const cl=v=>Math.max(0,Math.min(1,v)),sm=t=>t*t*(3-2*t);
+function measure(){W=innerWidth;H=stage.clientHeight;const d=W>=900;bw=d?Math.min(H*.86/1.534,W*.36):Math.min(W*.84,H*.56/1.534);bh=bw*1.534;
+ book.style.setProperty('--bw',bw+'px');rx=d?W*.32-bw/2:W/2-bw/2;ry=d?H/2-bh/2:H*.04;ht=hero.offsetHeight-H;draw()}
+function draw(){tick=false;const p=cl((scrollY-hero.offsetTop)/ht);
+ // two shapeshifts: the creature half turns lion to bear, then bear to bat, while the human half holds still
+ const a=sm(cl((p-.2)/.16)),b=sm(cl((p-.5)/.16));
+ L[1].style.opacity=a.toFixed(3);L[2].style.opacity=b.toFixed(3);
+ T[0].style.opacity=(1-cl(a*2)).toFixed(3);T[1].style.opacity=(cl(a*2-1)*(1-cl(b*2))).toFixed(3);T[2].style.opacity=cl(b*2-1).toFixed(3);
+ // the camera starts close on the figure and settles back as the last change lands; a small shudder at each change
+ const z=1.22-.22*sm(cl((p-.05)/.7));const jolt=Math.sin(a*Math.PI)*4+Math.sin(b*Math.PI)*-4;
+ book.style.transform=`translate(${rx+jolt}px,${ry}px) scale(${z.toFixed(4)})`;
+ const c=cl((p-.78)/.16);cap.style.opacity=(1-c).toFixed(3);copy.style.opacity=c;stage.style.setProperty('--sc',c);
+ copy.style.transform=(W>=900?'translateY(-50%) ':'')+`translateY(${(1-c)*14}px)`}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(draw)}},{passive:true});addEventListener('resize',measure);measure()})();
+</script>
+</body>
+</html>
